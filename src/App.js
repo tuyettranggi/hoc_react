@@ -1,24 +1,100 @@
-import logo from './logo.svg';
 import './App.css';
+/*import ReactDOM from "react-dom/client";*/
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import Header from "./components/Header/Header";
+import Home from "./components/Home";
+import NamingRulesForComponents01 from "./components/32.NamingRulesForComponents01";
+import NamingRulesForComponents02 from "./components/32.NamingRulesForComponents02";
+import NamingRulesForComponents03 from "./components/32.NamingRulesForComponents03";
+import ChildrenProps01 from "./components/34.ChildrenProps_01";
+import ChildrenProps02 from "./components/34.ChildrenProps_02";
+import ChildrenProps03 from "./components/34.ChildrenProps_03";
+import ChildrenProps04 from "./components/34.ChildrenProps_04";
+import HooksUseState from "./components/47.Hooks.useState";
+import HooksUseStateCallback from "./components/47.Hooks.useState.callback";
+import HooksUseStateInitValue01, {HooksUseStateInitValue02} from "./components/47.Hooks.useState.initValue.callback";
+import HooksUseState04 from "./components/47.Hooks.useState04";
+import HooksUseState05 from "./components/47.Hooks.useState05";
+import TwowayBinding01 from "./components/49.TwowayBinding01";
+import TwowayBinding02 from "./components/49.TwowayBinding02";
+import TwowayBinding03 from "./components/49.TwowayBinding03";
+import TodolistWithUseStage from "./components/50.TodolistWithUseStage";
+import MountedAndUnmounted from "./components/50.MountedAndUnmounted";
 
 function App() {
+  console.log('render App');
+  //32.quy_uoc_dat_ten_components02
+  const handleClick = textAlert => alert(textAlert);
+  //34.ChildrenProps_01.js
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Header />
+
+      {/* <ComponentsInFiles /> */}
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/32.quy_uoc_dat_ten_components01/" element={<NamingRulesForComponents01
+          style = {{ "background": "blue" }}
+        />} />
+        <Route path="/32.quy_uoc_dat_ten_components02/" element={<NamingRulesForComponents02
+          title="Click me!"
+          textAlert = "Đã click"
+          //href="http://localhost:3000/"
+          onClick={handleClick}
+        />} />
+        <Route path="/32.quy_uoc_dat_ten_components03/" element={<NamingRulesForComponents03
+          title="Đây là title (xuất hiện ưu tiên)"
+          content = "Đây là content (Xuất hiện khi không có title)"
+        />} />
+        <Route path="/34.children_props01/" element={<ChildrenProps01
+          primary
+          title="Button children_props01"
+          style = {{padding: 10}}
+        />} />
+        <Route path="/34.children_props02/" element={<ChildrenProps02 />} />
+        <Route path="/34.children_props03/" element={<ChildrenProps03 />} />
+        <Route path="/34.children_props04/" element={<ChildrenProps04 />} />
+        <Route path="/47.hooks_usestate/" element={<HooksUseState />} />
+        <Route path="/47.hooks_usestate_callback/" element={<HooksUseStateCallback />} />
+        <Route path="/47.hooks_usestate_initvalue_callback/" element={<HooksUseStateInitValue01 />} />
+        <Route path="/47.hooks_usestate_initvalue_callback_optimize/" element={<HooksUseStateInitValue02 />} />
+        <Route path="/47.hooks_usestate04/" element={<HooksUseState04 />} />
+        <Route path="/47.hooks_usestate05/" element={<HooksUseState05 />} />
+        <Route path="/49.two_way_binding01/" element={<TwowayBinding01 />} />
+        <Route path="/49.two_way_binding02/" element={<TwowayBinding02 />} />
+        <Route path="/49.two_way_binding03/" element={<TwowayBinding03 />} />
+        <Route path="/50.todolist_with_usestage/" element={<TodolistWithUseStage />} />
+        <Route path="/51.mounted&amp;unmounted/" element={<MountedAndUnmounted />} />
+      </Routes>
+      
+      <nav className='gnavi'>
+        <ul>
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/32.quy_uoc_dat_ten_components01/">32.Quy ước đặt tên components | Object component</Link></li>
+          <li><Link to="/32.quy_uoc_dat_ten_components02/">32.Quy ước đặt tên components | Object props</Link></li>
+          <li><Link to="/32.quy_uoc_dat_ten_components03/">32.Quy ước đặt tên components | Toán tử <code>||</code></Link></li>
+          <li><Link to="/34.children_props01/">34.Children props? Render props?</Link></li>
+          <li><Link to="/34.children_props02/">34.Children props? Render props? | <code>Spread/Rest props</code></Link></li>
+          <li><Link to="/34.children_props03/">34.Children props? Render props? | <code>Children prop &gt; String literals, {"{expression}"}</code></Link></li>
+          <li><Link to="/34.children_props04/">34.Children props? Render props? | <code>Truyền function vào children</code></Link></li>
+          <li><Link to="/47.hooks_usestate/">47.HooksUseState | <code>Hooks useState</code></Link></li>
+          <li><Link to="/47.hooks_usestate_callback/">47.HooksUseStateCallback | <code>callback</code></Link></li>
+          <li><Link to="/47.hooks_usestate_initvalue_callback/">47.Hooks useState | <code>initValue callback</code></Link></li>
+          <li><Link to="/47.hooks_usestate_initvalue_callback_optimize/">47.Hooks useState | <code>initValue callback optimize</code></Link></li>
+          <li><Link to="/47.hooks_usestate04/">47.Hooks useState | <code>initValue callback object</code></Link></li>
+          <li><Link to="/47.hooks_usestate05/">47.Hooks useState | <code>Bài tập chọn quà ngẫu nhiên</code></Link></li>
+          <li><Link to="/49.two_way_binding01/">49.Two-way binding trong React? | <code>Ràng buộc 2 chiều</code></Link></li>
+          <li><Link to="/49.two_way_binding02/">49.Two-way binding trong React? | <code>Xử lý radio</code></Link></li>
+          <li><Link to="/49.two_way_binding03/">49.Two-way binding trong React? | <code>Xử lý Checkbox</code></Link></li>
+          <li><Link to="/50.todolist_with_usestage/">50.Todolist with useState</Link></li>
+          <li><Link to="/51.mounted&amp;unmounted/">51.Mounted & Unmounted?</Link></li>
+        </ul>
+      </nav>
+    </Router>
+
+    
   );
 }
 

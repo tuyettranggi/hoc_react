@@ -36,3 +36,37 @@
     transform: rotate(360deg);
   }
 }
+
+.wrapper {
+  padding: 20px;
+}
+
+.gnavi li {
+  background-color: #c0d1f7;
+  padding: 5px 10px;
+}
+
+.gnavi li + li {
+  margin-top: 10px;
+}
+
+code {
+  background-color: rgb(245, 195, 214);
+  text-decoration: none;
+  display: inline-block;
+  padding: 2px;
+}
+
+button {
+  margin: 5px;
+  cursor: pointer;
+  padding: 5px 10px;
+}
+
+input[type="text"], input:not([type]) {
+  padding: 5px 10px;
+}
+
+.subComponent {
+  outline: 5px dashed darkkhaki;
+}
