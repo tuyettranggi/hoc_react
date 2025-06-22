@@ -1,24 +1,3 @@
-```
-import {
-    useState,
-    useEffect,
-    useLayoutEffect,
-    useRef,
-    useCallback,
-    useMemo,
-    useReducer,
-    useContext,
-    useImperativeHandle,
-    useDebugValue,
-    useActionState,
-    useDeferredValue,
-    useId,
-    useInsertionEffect,
-    useOptimistic,
-    useSyncExternalStore,
-    useTransition,
-} from 'react'
-```
 # 🎆🎆useState🎆🎆
 ## Dùng khi nào?
 Khi muốn dữ liệu thay đổi thì giao diện tự động được cập nhật (render lại theo dữ liệu).

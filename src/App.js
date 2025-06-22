@@ -20,9 +20,10 @@ import TwowayBinding02 from "./components/49.TwowayBinding02";
 import TwowayBinding03 from "./components/49.TwowayBinding03";
 import TodolistWithUseStage from "./components/50.TodolistWithUseStage";
 import MountedAndUnmounted from "./components/51.MountedAndUnmounted";
+import HomeMountedUnmounted from "./components/51h.MountedAndUnmounted";
+import HookUseEffect from "./components/52.Hooks.useEffect";
 
 function App() {
-  console.log('render App');
   //32.quy_uoc_dat_ten_components02
   const handleClick = textAlert => alert(textAlert);
   //34.ChildrenProps_01.js
@@ -67,6 +68,8 @@ function App() {
         <Route path="/49.two_way_binding03/" element={<TwowayBinding03 />} />
         <Route path="/50.todolist_with_usestage/" element={<TodolistWithUseStage />} />
         <Route path="/51.mounted&amp;unmounted/" element={<MountedAndUnmounted />} />
+        <Route path="/51.home.mounted&amp;unmounted/" element={<HomeMountedUnmounted />} />
+        <Route path="/52.hooks_useeffect/" element={<HookUseEffect />} />
       </Routes>
       
       <nav className='gnavi'>
@@ -90,11 +93,11 @@ function App() {
           <li><Link to="/49.two_way_binding03/">49.Two-way binding trong React? | <code>Xử lý Checkbox</code></Link></li>
           <li><Link to="/50.todolist_with_usestage/">50.Todolist with useState</Link></li>
           <li><Link to="/51.mounted&amp;unmounted/">51.Mounted & Unmounted?</Link></li>
+          <li><Link to="/51.home.mounted&amp;unmounted/">51.Mounted & Unmounted? (home)</Link></li>
+          <li><Link to="/52.hooks_useeffect/">52.Hooks useEffect</Link></li>
         </ul>
       </nav>
     </Router>
-
-    
   );
 }
 
