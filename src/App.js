@@ -19,7 +19,7 @@ import TwowayBinding01 from "./components/49.TwowayBinding01";
 import TwowayBinding02 from "./components/49.TwowayBinding02";
 import TwowayBinding03 from "./components/49.TwowayBinding03";
 import TodolistWithUseStage from "./components/50.TodolistWithUseStage";
-import MountedAndUnmounted from "./components/50.MountedAndUnmounted";
+import MountedAndUnmounted from "./components/51.MountedAndUnmounted";
 
 function App() {
   console.log('render App');
