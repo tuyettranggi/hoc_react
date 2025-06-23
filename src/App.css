@@ -37,6 +37,12 @@
   }
 }
 
+ul, ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 .wrapper {
   padding: 20px;
 }
@@ -69,4 +75,60 @@ input[type="text"], input:not([type]) {
 
 .subComponent {
   outline: 5px dashed darkkhaki;
+}
+
+ul.tabs {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-bottom: 2px solid #ccc;
+}
+
+
+ul.tabs li {
+  padding: 10px 15px;
+  margin: 0;
+  border: 1px solid #ccc;
+  border-bottom: none;
+  cursor: pointer;
+  background-color: #f0f0f0;
+  color: #333;
+  transition: background-color .3s ease;
+}
+
+
+ul.tabs li.active {
+  border-color: #282c34;
+  background-color: #fff;
+  color: #282c34;
+  border-bottom: 1px solid #fff;
+}
+
+
+ul.tabs li:hover {
+  background-color: #e0e0e0;
+}
+
+/* Style the main tab content container */
+ul.tabContent {
+  list-style: none;
+  padding: 20px;
+  margin: 0;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+/* Hide all tab content by default */
+ul.tabContent li {
+  border-top: 1px dashed #61dafb;
+  padding: 10px;
+  margin: 0;
+}
+
+/* Add basic styling to content within the li if needed */
+/* For example, if your content is inside paragraphs: */
+ul.tabContent li p {
+  line-height: 1.6;
+  color: #333;
 }
