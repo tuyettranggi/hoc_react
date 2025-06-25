@@ -23,6 +23,8 @@ import MountedAndUnmounted from "./components/51.MountedAndUnmounted";
 import HomeMountedUnmounted from "./components/51h.MountedAndUnmounted";
 import HookUseEffect from "./components/52.Hooks.useEffect";
 import HookUseEffectTab from "./components/52.Hooks.useEffect.tab";
+import HookUseEffectDom from "./components/56.Hooks.useEffect.DOM";
+import HookUseEffectCleanFunc from "./components/56.Hooks.useEffect.CleanFunc";
 
 function App() {
   //32.quy_uoc_dat_ten_components02
@@ -72,6 +74,8 @@ function App() {
         <Route path="/51.home.mounted&amp;unmounted/" element={<HomeMountedUnmounted />} />
         <Route path="/52.hooks_useeffect/" element={<HookUseEffect />} />
         <Route path="/52.Hooks.useEffect.tab/" element={<HookUseEffectTab />} />
+        <Route path="/56.Hooks.useEffect.DOM/" element={<HookUseEffectDom />} />
+        <Route path="/56.Hooks.useEffect.cleanFunc/" element={<HookUseEffectCleanFunc />} />
       </Routes>
       
       <nav className='gnavi'>
@@ -95,9 +99,11 @@ function App() {
           <li><Link to="/49.two_way_binding03/">49.Two-way binding trong React? | <code>Xử lý Checkbox</code></Link></li>
           <li><Link to="/50.todolist_with_usestage/">50.Todolist with useState</Link></li>
           <li><Link to="/51.mounted&amp;unmounted/">51.Mounted & Unmounted?</Link></li>
-          <li><Link to="/51.home.mounted&amp;unmounted/">51.Mounted & Unmounted? (home)</Link></li>
+          <li><Link to="/51.home.mounted&amp;unmounted/">51.Mounted & Unmounted? <code>(home)</code></Link></li>
           <li><Link to="/52.hooks_useeffect/">52.Hooks useEffect</Link></li>
-          <li><Link to="/52.Hooks.useEffect.tab/">52.Hooks useEffect | tab</Link></li>
+          <li><Link to="/52.Hooks.useEffect.tab/">52.Hooks useEffect | <code>Tab</code></Link></li>
+          <li><Link to="/56.Hooks.useEffect.DOM/">56.Hooks useEffect | <code>DOM | pagetop</code></Link></li>
+          <li><Link to="/56.Hooks.useEffect.cleanFunc/">56.Hooks useEffect | <code>Clean function</code></Link></li>
         </ul>
       </nav>
     </Router>
