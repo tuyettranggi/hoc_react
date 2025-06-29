@@ -20,6 +20,7 @@ const Content = () => {
             console.log(e);
         }
         window.addEventListener('lesson-1',handleComment)
+        return () => window.removeEventListener('lesson-1',handleComment)
     },[]);
     return (
         <>
