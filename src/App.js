@@ -28,6 +28,7 @@ import HookUseEffectCleanFunc from "./components/56.Hooks.useEffect.CleanFunc";
 import UseEffectWithPreviewAvatar from "./components/59.Hook.useEffect.with.preview.avatar";
 import UseEffectWithChatApp from "./components/60.Hook.useEffect.with.fake.Chat.App";
 import UseReducerTodoApp from "./components/73.Hook.useReducer.TodoApp";
+import UseReducerRecap from "./components/74.useReducer.recap";
 
 function App() {
   //32.quy_uoc_dat_ten_components02
@@ -82,6 +83,7 @@ function App() {
         <Route path="/59.Hook.useEffect.with.preview.avatar/" element={<UseEffectWithPreviewAvatar />} />
         <Route path="/60.Hook.useEffect.with.fake.Chat.App/" element={<UseEffectWithChatApp />} />
         <Route path="/73.Hook.useReducer.TodoApp/" element={<UseReducerTodoApp />} />
+        <Route path="/74.useReducer.recap/" element={<UseReducerRecap />} />
       </Routes>
       
       <nav className='gnavi'>
@@ -113,6 +115,7 @@ function App() {
           <li><Link to="/59.Hook.useEffect.with.preview.avatar/">56.Hooks useEffect | <code>preview avatar</code></Link></li>
           <li><Link to="/60.Hook.useEffect.with.fake.Chat.App/">56.Hooks useEffect | <code>fake Chat App</code></Link></li>
           <li><Link to="/73.Hook.useReducer.TodoApp/">56.Hooks useReducer | <code>Todo App</code></Link></li>
+          <li><Link to="/74.useReducer.recap/">56.Hooks useReducer | <code>Todo App | recap</code></Link></li>
         </ul>
       </nav>
     </Router>
