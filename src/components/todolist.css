@@ -1,0 +1,159 @@
+.todo-body {
+  background: #f5f7fa;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+/* truy cập tên class bình thường styles.wrapper */
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 30px 0;
+}
+/* truy cập tên class có dấu gạch nối styles["todo-wrapper"]*/
+.todo-wrapper {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  padding: 32px 28px 20px 28px;
+  width: 340px;
+  min-width: 320px;
+}
+.todo-title {
+  display: flex;
+  align-items: center;
+  font-size: 1.6em;
+  font-weight: 700;
+  margin-bottom: 18px;
+  gap: 8px;
+}
+.todo-title .icon {
+  font-size: 1.2em;
+}
+.todo-input-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 18px;
+  gap: 8px;
+}
+.todo-input-row input {
+  flex: 1;
+  padding: 10px 12px;
+  border: 1.5px solid #dbeafe;
+  border-radius: 8px 0 0 8px;
+  font-size: 1em;
+  outline: none;
+  transition: border 0.2s;
+  background: #f8fafc;
+}
+.todo-input-row input:focus {
+  border-color: #60a5fa;
+}
+.todo-input-row button {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 0 8px 8px 0;
+  padding: 0 16px;
+  font-size: 1.3em;
+  cursor: pointer;
+  transition: background 0.2s;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.todo-input-row button:hover {
+  background: #1d4ed8;
+}
+.filter-bar {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+.filter-btn {
+  flex: 1;
+  padding: 7px 0;
+  border: none;
+  border-radius: 8px;
+  background: #f1f5f9;
+  color: #334155;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.filter-btn.active {
+  background: #2563eb;
+  color: #fff;
+}
+.todo-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-bottom: 18px;
+}
+.todo-item {
+  display: flex;
+  align-items: center;
+  padding: 7px 0;
+  border-bottom: 1px solid #f1f5f9;
+  font-size: 1.05em;
+  gap: 8px;
+}
+.todo-item.completed span {
+  text-decoration: line-through;
+}
+.todo-item.completed input {
+  accent-color: #8e929b;
+}
+.todo-item:last-child {
+  border-bottom: none;
+}
+.todo-checkbox {
+  width: 20px;
+  height: 20px;
+  accent-color: #2563eb;
+  margin-right: 6px;
+  cursor: pointer;
+}
+.todo-text {
+  flex: 1;
+  color: #222;
+  transition: color 0.2s;
+}
+.todo-item.completed .todo-text {
+  color: #94a3b8;
+  text-decoration: line-through;
+}
+.todo-actions {
+  display: flex;
+  gap: 6px;
+}
+.todo-actions button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1em;
+  padding: 2px 4px;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+.todo-actions .edit-btn:hover {
+  background: #fde68a;
+}
+.todo-actions .delete-btn:hover {
+  background: #fecaca;
+}
+.saved-info {
+  color: #64748b;
+  font-size: 0.98em;
+  text-align: center;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+.saved-info .cloud {
+  font-size: 1.1em;
+}

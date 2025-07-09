@@ -1,0 +1,24 @@
+{
+  "todos": [
+    {
+      "id": "1",
+      "title": "Học react",
+      "completed": false
+    },
+    {
+      "id": "2",
+      "title": "Học Next js",
+      "completed": false
+    },
+    {
+      "id": "3",
+      "title": "Làm bài tập react",
+      "completed": false
+    },
+    {
+      "id": "8340",
+      "title": "New task",
+      "completed": false
+    }
+  ]
+}
